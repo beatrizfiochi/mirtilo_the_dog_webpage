@@ -34,3 +34,12 @@ body {
     padding-right: 10px;
     text-align: center;
 }
+
+footer,
+footer a {
+    color: var(--cinza);
+}
+
+footer a:hover {
+    color: var(--violeta_escuro);
+}
