@@ -43,3 +43,20 @@ footer a {
 footer a:hover {
     color: var(--violeta_escuro);
 }
+
+main h1 {
+    color: var(--cinza);
+    font-size: 65px;
+    max-width: 900px;
+    min-width: 500px;
+    font-weight: 700;
+}
+
+#frase-home {
+    color: var(--violeta_escuro);
+}
+
+.bi-infinity {
+    font-size: 40px;
+    color: var(--cinza);
+}
