@@ -1,0 +1,36 @@
+:root {
+    --branco_violeta: #f8f5fa;
+    --violeta_suave: #E1D5F2;
+    --violeta: #d8bff0;
+    --violeta_escuro: #a082ca;
+    --rosa: #F1C4F2;
+    --cinza: #545454;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background-image: linear-gradient(
+        to bottom right, 
+        var(--branco_violeta),
+        var(--violeta_suave), 
+        var(--violeta), 
+        var(--rosa)
+    );
+}
+
+.navbar-brand img {
+    width: 100px;
+    height: 100px;
+}
+
+.minha-offcanvas {
+    background-color: var(--violeta_escuro);
+    --bs-offcanvas-width: 250px;
+}
+
+#offcanvas_img {
+    width: 50px;
+    height: 40px;
+    padding-right: 10px;
+    text-align: center;
+}
