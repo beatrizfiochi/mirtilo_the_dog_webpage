@@ -70,7 +70,7 @@ main h1 {
 
 #titulo-sobre {
     padding: 1rem 1rem 0.5rem;
-    margin-top: 100px;
+    margin-top: 80px;
 }
 
 #titulo-sobre h1{
@@ -83,7 +83,8 @@ main h1 {
 }
 
 #main-sobre {
-    padding-top: 20px;
+    padding-top: 10px;
+    padding-bottom: 20px;
 }
 
 #carouselExampleSlidesOnly {
@@ -92,8 +93,25 @@ main h1 {
     margin: 0 auto;
 }
 
+#carouselExampleSlidesOnly img {
+    max-height: 60vh;
+    object-fit: cover;
+}
+
+footer {
+    padding: 1rem;
+}
+
 /* media query - essa regra será aplicada apenas quando o ecrã tem 576px ou menos */
 @media (max-width: 576px) {
+    #titulo-sobre {
+        margin-top: 70px;
+    }
+
+    #carouselExampleSlidesOnly img {
+        max-height: 45vh;
+    }
+
     main h1 {
         font-size: clamp(1.2rem, 6vw, 2rem);
     }
