@@ -44,12 +44,19 @@ footer a:hover {
     color: var(--violeta_escuro);
 }
 
+
+/*  rem - unidade relativa à fonte na root (root em)
+    vw - unidade relativa ao viweport (viewport width)
+    clamp() - proporciona um tamanho fluido com limites
+*/
+
 main h1 {
     color: var(--cinza);
-    font-size: 65px;
+    font-size: clamp(1.8rem, 5vw, 65px); /*clamp(mínimo, preferido, máximo)*/
     max-width: 900px;
-    min-width: 500px;
+    width: 90vw;
     font-weight: 700;
+    padding: 0 1rem;
 }
 
 #frase-home {
@@ -57,14 +64,16 @@ main h1 {
 }
 
 .bi-infinity {
-    font-size: 40px;
+    font-size: clamp(1.5rem, 5vw, 40px);
     color: var(--cinza);
 }
 
 #main-sobre h1{
     color: var(--cinza);
-    font-size: 35px;
+    font-size: clamp(1.8rem, 5vw, 35px);
     max-width: 900px;
-    min-width: 500px;
+    width: 90vw;
     font-weight: 700;
+    padding: 0 1rem;
 }
+
