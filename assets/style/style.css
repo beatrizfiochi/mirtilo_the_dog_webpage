@@ -70,7 +70,7 @@ main h1 {
 
 #titulo-sobre {
     padding: 1rem 1rem 0.5rem;
-    margin-top: 80px;
+    margin-top: 110px;
 }
 
 #titulo-sobre h1{
@@ -102,10 +102,15 @@ footer {
     padding: 1rem;
 }
 
-/* media query - essa regra será aplicada apenas quando o ecrã tem 576px ou menos */
+/* media query - essa regra será aplicada apenas quando o ecrã tem 576px ou menos - mobile */
 @media (max-width: 576px) {
+    .navbar-brand img {
+        width: 65px;
+        height: 65px;
+    }
+
     #titulo-sobre {
-        margin-top: 70px;
+        margin-top: 75px;
     }
 
     #carouselExampleSlidesOnly img {
