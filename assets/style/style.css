@@ -52,7 +52,7 @@ footer a:hover {
 
 main h1 {
     color: var(--cinza);
-    font-size: clamp(1.8rem, 5vw, 65px); /*clamp(mínimo, preferido, máximo)*/
+    font-size: clamp(1.4rem, 4vw, 65px); /*clamp(mínimo, preferido, máximo)*/
     max-width: 900px;
     width: 90vw;
     font-weight: 700;
@@ -64,13 +64,13 @@ main h1 {
 }
 
 .bi-infinity {
-    font-size: clamp(1.5rem, 5vw, 40px);
+    font-size: clamp(1.4rem, 4vw, 40px);
     color: var(--cinza);
 }
 
 #main-sobre h1{
     color: var(--cinza);
-    font-size: clamp(1.8rem, 5vw, 35px);
+    font-size: clamp(1.4rem, 4vw, 35px);
     max-width: 900px;
     width: 90vw;
     font-weight: 700;
