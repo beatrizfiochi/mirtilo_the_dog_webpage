@@ -3,6 +3,7 @@
     --violeta_suave: #E1D5F2;
     --violeta: #d8bff0;
     --violeta_escuro: #a082ca;
+    --violeta_intenso: #7452a5;
     --rosa: #F1C4F2;
     --cinza: #545454;
 }
@@ -21,6 +22,12 @@ body {
 .navbar-brand img {
     width: 100px;
     height: 100px;
+}
+
+.navbar {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* Safari */
+   background-color: rgba(255, 255, 255, 0.1);
 }
 
 .minha-offcanvas {
@@ -70,11 +77,11 @@ main h1 {
 
 #titulo-sobre {
     padding: 1rem 1rem 0.5rem;
-    margin-top: 110px;
+    margin-top: 75px;
 }
 
 #titulo-sobre h1{
-    color: var(--cinza);
+    color: var(--violeta_intenso);
     font-size: clamp(1.4rem, 4vw, 35px);
     max-width: 900px;
     width: 90vw;
@@ -84,22 +91,80 @@ main h1 {
 
 #main-sobre {
     padding-top: 10px;
-    padding-bottom: 20px;
+    padding-bottom: 100px;
+}
+
+#layout-sobre {
+    flex-direction: row;
+    align-items: stretch;
+    min-height: calc(100vh - 110px); /* 110px tamanho da navbar */
+}
+
+#carousel-sobre {
+    min-width: 600px;
+    width: 45%;
+    flex-shrink: 0;
+    position: sticky;
+    top: 100px;
+    align-self: flex-start;
 }
 
 #carouselExampleSlidesOnly {
-    max-width: 500px;
-    width: 90vw;
+    max-width: none;
+    width: 100%;
     margin: 0 auto;
 }
 
 #carouselExampleSlidesOnly img {
-    max-height: 60vh;
+    height: calc(100vh - 110px); /* 110px tamanho da navbar */
     object-fit: cover;
+}
+
+#texto-sobre {
+    flex: 1;
+    padding: 2rem 3rem;
+    text-align: left;
+    color: var(--cinza);
+    font-size: clamp(0.95rem, 1.5vw, 1.1rem);
+    line-height: 1.8;
+    min-width: 520px;
 }
 
 footer {
     padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.fw-bold {
+    color: var(--violeta_intenso);
+}
+
+@media (max-width: 1070px) {
+    #layout-sobre {
+        flex-direction: column;
+        min-height: unset;
+    }
+
+    #carousel-sobre {
+        width: 100%;
+        position: static;
+    }
+
+    #carouselExampleSlidesOnly img {
+        height: 45vh;
+    }
+
+    #texto-sobre {
+        padding: 1.5rem 1.2rem;
+        text-align: center;
+        min-width: 520px;
+    }
+
+    #titulo-sobre {
+        margin-top: 10px;
+    }
 }
 
 /* media query - essa regra será aplicada apenas quando o ecrã tem 576px ou menos - mobile */
@@ -107,10 +172,6 @@ footer {
     .navbar-brand img {
         width: 65px;
         height: 65px;
-    }
-
-    #titulo-sobre {
-        margin-top: 75px;
     }
 
     #carouselExampleSlidesOnly img {
