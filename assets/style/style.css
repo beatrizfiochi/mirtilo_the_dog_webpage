@@ -185,4 +185,24 @@ footer {
     .bi-infinity {
         font-size: 1.5rem;
     }
+
+    #layout-sobre {
+        flex-direction: column;
+        min-height: unset;
+    }
+
+    #carousel-sobre {
+        width: 100%;
+        position: static;
+    }
+
+        #texto-sobre {
+        padding: 1.5rem 1.2rem;
+        text-align: center;
+        min-width: 520px;
+    }
+
+    #titulo-sobre {
+        margin-top: 10px;
+    }
 }
