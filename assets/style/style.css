@@ -6,6 +6,14 @@
     --violeta_intenso: #7452a5;
     --rosa: #F1C4F2;
     --cinza: #545454;
+    --navbar-h: 110px;
+    --footer-h: 100px;
+}
+
+html, body {
+    height: auto;
+    min-height: 100vh;
+    overflow-x: hidden;
 }
 
 body {
@@ -27,7 +35,15 @@ body {
 .navbar {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px); /* Safari */
-   background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+#main-sobre {
+    padding-top: var(--navbar-h);
+    flex-direction: column;
+    min-height: 0;
+    display: block;
+    overflow: visible;
 }
 
 .minha-offcanvas {
@@ -77,7 +93,6 @@ main h1 {
 
 #titulo-sobre {
     padding: 1rem 1rem 0.5rem;
-    margin-top: 75px;
 }
 
 #titulo-sobre h1{
@@ -89,45 +104,37 @@ main h1 {
     padding: 0 1rem;
 }
 
-#main-sobre {
-    padding-top: 10px;
-    padding-bottom: 100px;
-}
-
 #layout-sobre {
-    flex-direction: row;
-    align-items: stretch;
-    min-height: calc(100vh - 110px); /* 110px tamanho da navbar */
+    display: grid;
+    grid-template-columns: 45% 1fr;
+    padding-bottom: var(--footer-h);
+    align-items: start;
 }
 
 #carousel-sobre {
-    min-width: 600px;
-    width: 45%;
-    flex-shrink: 0;
     position: sticky;
-    top: 100px;
-    align-self: flex-start;
+    position: -webkit-sticky; /* Safari */
+    top: var(--navbar-h);
+    height: calc(100vh - var(--navbar-h));
+    align-self: start;
+    overflow: hidden;
 }
 
-#carouselExampleSlidesOnly {
-    max-width: none;
-    width: 100%;
-    margin: 0 auto;
+#carouselExampleSlidesOnly .carousel-inner,
+#carouselExampleSlidesOnly .carousel-item {
+    height: 100%;
 }
 
 #carouselExampleSlidesOnly img {
-    height: calc(100vh - 110px); /* 110px tamanho da navbar */
+    width: 100%;
+    height: calc(100vh - var(--navbar-h));
     object-fit: cover;
 }
 
 #texto-sobre {
-    flex: 1;
-    padding: 2rem 3rem;
-    text-align: left;
-    color: var(--cinza);
-    font-size: clamp(0.95rem, 1.5vw, 1.1rem);
-    line-height: 1.8;
-    min-width: 520px;
+    overflow-y: auto;
+    height: 100%;
+    padding: 1rem 3rem 2rem;
 }
 
 footer {
@@ -135,6 +142,7 @@ footer {
     background-color: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
+    height: var(--footer-h);
 }
 
 .fw-bold {
@@ -142,29 +150,28 @@ footer {
 }
 
 @media (max-width: 1070px) {
+    html, body {
+        height: auto;
+        overflow-y: auto; 
+    }
+
     #layout-sobre {
-        flex-direction: column;
-        min-height: unset;
+        display: block;
+        height: auto;
     }
 
     #carousel-sobre {
-        width: 100%;
-        min-width: 0;
-        position: static;
+        height: auto;
     }
 
     #carouselExampleSlidesOnly img {
-        height: 45vh;
+        height: auto;
+        max-height: 45vh;
     }
 
     #texto-sobre {
-        padding: 1.5rem 1.2rem;
-        text-align: center;
-        min-width: 0;
-    }
-
-    #titulo-sobre {
-        margin-top: 10px;
+        overflow: visible;
+        height: auto;
     }
 }
 
@@ -176,7 +183,7 @@ footer {
     }
 
     #carouselExampleSlidesOnly img {
-        max-height: 45vh;
+        height: 45vh;
     }
 
     main h1 {
@@ -185,26 +192,5 @@ footer {
 
     .bi-infinity {
         font-size: 1.5rem;
-    }
-
-    #layout-sobre {
-        flex-direction: column;
-        min-height: unset;
-    }
-
-    #carousel-sobre {
-        width: 100%;
-        min-width: 0;
-        position: static;
-    }
-
-        #texto-sobre {
-        padding: 1.5rem 1.2rem;
-        text-align: center;
-        min-width: 0;
-    }
-
-    #titulo-sobre {
-        margin-top: 10px;
     }
 }
