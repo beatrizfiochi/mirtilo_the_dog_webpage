@@ -149,6 +149,7 @@ footer {
 
     #carousel-sobre {
         width: 100%;
+        min-width: 0;
         position: static;
     }
 
@@ -159,7 +160,7 @@ footer {
     #texto-sobre {
         padding: 1.5rem 1.2rem;
         text-align: center;
-        min-width: 520px;
+        min-width: 0;
     }
 
     #titulo-sobre {
@@ -193,13 +194,14 @@ footer {
 
     #carousel-sobre {
         width: 100%;
+        min-width: 0;
         position: static;
     }
 
         #texto-sobre {
         padding: 1.5rem 1.2rem;
         text-align: center;
-        min-width: 520px;
+        min-width: 0;
     }
 
     #titulo-sobre {
