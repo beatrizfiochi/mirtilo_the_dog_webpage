@@ -11,8 +11,8 @@
 }
 
 html, body {
-    height: auto;
-    min-height: 100vh;
+    height: 100vh;
+    overflow: hidden;
     overflow-x: hidden;
 }
 
@@ -39,11 +39,13 @@ body {
 }
 
 #main-sobre {
+    height: 100vh;
     padding-top: var(--navbar-h);
+    padding-bottom: calc(var(--footer-h) - 15px);
+    box-sizing: border-box;
     flex-direction: column;
-    min-height: 0;
     display: block;
-    overflow: visible;
+    overflow: hidden;
 }
 
 .minha-offcanvas {
@@ -107,19 +109,16 @@ main h1 {
 #layout-sobre {
     display: grid;
     grid-template-columns: 45% 1fr;
-    padding-bottom: var(--footer-h);
+    height: 100%;
     align-items: start;
 }
 
 #carousel-sobre {
-    position: sticky;
-    position: -webkit-sticky; /* Safari */
-    top: var(--navbar-h);
-    height: calc(100vh - var(--navbar-h));
-    align-self: start;
+    height: 100%;
     overflow: hidden;
 }
 
+#carouselExampleSlidesOnly,
 #carouselExampleSlidesOnly .carousel-inner,
 #carouselExampleSlidesOnly .carousel-item {
     height: 100%;
@@ -127,7 +126,7 @@ main h1 {
 
 #carouselExampleSlidesOnly img {
     width: 100%;
-    height: calc(100vh - var(--navbar-h));
+    height: 100%;
     object-fit: cover;
 }
 
@@ -152,7 +151,13 @@ footer {
 @media (max-width: 1070px) {
     html, body {
         height: auto;
-        overflow-y: auto; 
+        overflow: visible; 
+    }
+
+    #main-sobre {
+        height: auto;
+        padding-bottom: 0;
+        overflow: visible;
     }
 
     #layout-sobre {
@@ -172,6 +177,7 @@ footer {
     #texto-sobre {
         overflow: visible;
         height: auto;
+        padding-bottom: var(--footer-h);
     }
 }
 
