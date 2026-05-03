@@ -319,6 +319,287 @@ main h1 {
     color: white;
 }
 
+/* Estilização página PEDIDO */
+
+#main-pedido {
+    padding-top: var(--navbar-h);
+    padding-bottom: calc(var(--footer-h) - 15px);
+    overflow: auto;
+}
+
+#div-pedido {
+    width: 100%;
+}
+
+#main-pedido h2 {
+    padding-top: 20px;
+}
+
+#frase-pedido {
+    color: var(--cinza);
+}
+
+#layout-pedido {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;        
+    padding: 1rem;
+    gap: 2rem;
+}
+
+#info-pedido,
+#form-pedido {
+    width: 100%;
+    max-width: 700px;
+}
+
+/* Info pedido */
+
+#info-pedido {
+    color: var(--cinza);
+    padding: 0 1rem;
+    text-align: center;
+}
+
+.passo-numero {
+    flex-shrink: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--violeta_escuro);
+    color: white;
+    font-weight: 700;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 0.4rem;
+}
+
+.passo-item {
+    display: flex;
+    flex-direction: column;  
+    align-items: center;  
+    text-align: center;
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto 1.2rem;
+}
+
+.passo-texto {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* formulário */
+#form-pedido {
+    background: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.55);
+    border-radius: 24px;
+    padding: 2rem 2.2rem;
+}
+
+#form-pedido h2 {
+    color: var(--violeta_intenso);
+    font-size: clamp(1.1rem, 2vw, 1.4rem);
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.form-label {
+    color: var(--cinza);
+    font-weight: 600;
+    font-size: 0.88rem;
+    margin-bottom: 0.3rem;
+}
+
+.form-label .obrigatorio {
+    color: var(--violeta_intenso);
+    margin-left: 2px;
+}
+
+.form-control,
+.form-select {
+    background: rgba(255, 255, 255, 0.6);
+    border: 1px solid var(--violeta_suave);
+    border-radius: 12px;
+    color: var(--cinza);
+    font-family: 'Nunito', sans-serif;
+    font-size: 0.9rem;
+    padding: 0.55rem 0.9rem;
+    transition: border-color 0.2s, background 0.2s, box-shadow 0.2s;
+}
+
+.form-control:focus,
+.form-select:focus {
+    background: rgba(255, 255, 255, 0.85);
+    border-color: var(--violeta_intenso);
+    box-shadow: 0 0 0 3px rgba(116, 82, 165, 0.15);
+    color: var(--cinza);
+    outline: none;
+}
+
+/* Multiselect personalizado */
+#modelos-select {
+    min-height: 130px;
+}
+
+#modelos-select option {
+    padding: 5px 8px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#modelos-select option:checked {
+    background-color: var(--violeta_intenso);
+    color: white;
+}
+
+.select-hint {
+    font-size: 0.78rem;
+    color: var(--violeta_escuro);
+    margin-top: 0.25rem;
+}
+
+/* Radio group */
+.radio-group {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.radio-card {
+    flex: 1;
+    min-width: 140px;
+}
+
+.radio-card input[type="radio"] {
+    display: none;
+}
+
+.radio-card label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1rem;
+    background: rgba(255, 255, 255, 0.6);
+    border: 1px solid var(--violeta_suave);
+    border-radius: 12px;
+    color: var(--cinza);
+    font-size: 0.88rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-align: center;
+}
+
+.radio-card input[type="radio"]:checked + label {
+    background-color: var(--violeta_intenso);
+    border-color: var(--violeta_intenso);
+    color: white;
+}
+
+.radio-card label:hover {
+    border-color: var(--violeta_escuro);
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.radio-card input[type="radio"]:checked + label:hover {
+    background-color: var(--violeta_escuro);
+}
+
+/* Campo morada (aparece apenas quando correio está selecionado) */
+#campo-morada-envio,
+#campo-morada-recepcao {
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.35s ease, opacity 0.3s ease;
+}
+
+#campo-morada-envio.visivel,
+#campo-morada-recepcao.visivel {
+    max-height: 120px;
+    opacity: 1;
+}
+
+/* Botão submit */
+.btn-pedido {
+    background-color: var(--violeta_intenso);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 0.7rem 2.5rem;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+    width: 100%;
+    margin-top: 0.5rem;
+}
+
+.btn-pedido:hover {
+    background-color: var(--violeta_escuro);
+    transform: translateY(-1px);
+}
+
+.btn-pedido:active {
+    transform: translateY(0);
+}
+
+/* Mensagem de validação personalizada */
+.form-control.is-invalid,
+.form-select.is-invalid {
+    border-color: #dc3545;
+    box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.12);
+}
+
+.invalid-feedback {
+    font-size: 0.8rem;
+}
+
+/* Separador entre secções */
+.form-section-title {
+    color: var(--violeta_escuro);
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.75rem;
+    margin-top: 0.25rem;
+}
+
+/* ── Mensagem de sucesso ── */
+#mensagem-sucesso {
+    display: none;
+    text-align: center;
+    padding: 2rem;
+}
+
+#mensagem-sucesso i {
+    font-size: 3rem;
+    color: var(--violeta_intenso);
+}
+
+#mensagem-sucesso h3 {
+    color: var(--violeta_intenso);
+    font-weight: 700;
+    margin-top: 1rem;
+}
+
+#mensagem-sucesso p {
+    color: var(--cinza);
+    font-size: 0.95rem;
+}
+
 /* media query - essa regra será aplicada apenas quando o ecrã tem 1070px ou menos */
 @media (max-width: 1070px) {
     html, body {
