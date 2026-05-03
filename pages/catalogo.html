@@ -46,7 +46,37 @@
                         <a class="nav-link" href="sobre.html">Sobre nós</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="catalogo.html">Catálogo</a>
+                        <div class="accordion" id="accordionExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                <button class="accordion-button collapsed bg-transparent shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                    <a class="nav-link active" href="catalogo.html">Catálogo</a>
+                                </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body pt-0">
+                                        <div>
+                                            <a id="todos" class="nav-link" href="catalogo.html">Todos</a>
+                                        </div>
+                                        <div>
+                                            <a id="colar" class="nav-link" href="catalogo.html">Colares</a>
+                                        </div>
+                                        <div>
+                                            <a id="conta" class="nav-link" href="catalogo.html">Contas</a>
+                                        </div>
+                                        <div>
+                                            <a id="porta-chaves" class="nav-link" href="catalogo.html">Porta-chaves</a>
+                                        </div>
+                                        <div>
+                                            <a id="personalizado" class="nav-link" href="catalogo.html">Personalize o seu</a>
+                                        </div>
+                                        <div>
+                                            <a id="news" class="nav-link" href="catalogo.html">Novidades</a>
+                                        </div> 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Faça o seu pedido</a>
@@ -55,7 +85,9 @@
             </div>
         </div>
     </header>
-    <main class="d-flex flex-column align-items-center justify-content-center flex-grow-1 text-center px-3">
+    <main id="main-catalogo" class="d-flex flex-column align-items-center justify-content-center flex-grow-1 text-center px-3">
+        <div id="titulo-catalogo" class="d-flex text-center justify-content-center"><h1>Catálogo</span></h1></div>
+
     </main>
     <footer class="container-fluid text-center p-3 mt-auto fixed-bottom">
         <div class="row">
@@ -69,5 +101,8 @@
 
     <!--BOOTSTRAP JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+    <!-- MEU JS -->
+     <script src="../scripts/main.js"></script>
 </body>
 </html>
