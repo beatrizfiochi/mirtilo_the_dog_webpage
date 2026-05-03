@@ -2,99 +2,147 @@
   "catalogo_produtos": [
     {
       "id": 1,
-      "nome_produto:": "Colar Flor",
-      "categoria": "Colar",
+      "nome_produto": "Colar Flor",
+      "categoria": "colar",
       "descricao": "Colar Flor com cinzas",
       "tamanho": "12mm",
       "material": "aço inoxidável",
       "cor": "prateado",
       "nome_colecao": "Furever and Ashes",
       "preco": 60.0,
-      "imagem_src": "../assets/img/catalogo/catalogo1.jpeg"
+      "imagem_src": "../assets/img/catalogo/catalogo1.jpg"
     },
     {
       "id": 2,
-      "nome_produto:": "Colar Céu",
-      "categoria": "Colar",
+      "nome_produto": "Colar Céu",
+      "categoria": "colar",
       "descricao": "Colar Céu com cinzas e zircónia",
       "tamanho": "12mm",
       "material": "aço inoxidável",
       "cor": "prateado e dourado",
       "nome_colecao": "Furever and Ashes",
       "preco": 60.0,
-      "imagem_src": "../assets/img/catalogo/catalogo2.jpeg"
+      "imagem_src": "../assets/img/catalogo/catalogo2.jpg"
     },
     {
       "id": 3,
-      "nome_produto:": "Colar Sol",
-      "categoria": "Colar",
+      "nome_produto": "Colar Sol",
+      "categoria": "colar",
       "descricao": "Colar Sol com cinzas",
       "tamanho": "",
       "material": "aço inoxidável",
       "cor": "dourado",
       "nome_colecao": "Furever and Ashes",
       "preco": 60.0,
-      "imagem_src": "../assets/img/catalogo/catalogo3.jpeg"
+      "imagem_src": "../assets/img/catalogo/catalogo3.jpg"
     },
     {
       "id": 4,
-      "nome_produto:": "Colar Jasmim",
-      "categoria": "Colar",
+      "nome_produto": "Colar Jasmim",
+      "categoria": "colar",
       "descricao": "Colar Jasmim com pelo ou cinzas em forma de coração e com um toque floral",
       "tamanho": "10mm",
       "material": "aço inoxidável",
       "cor": "prateado e dourado",
       "nome_colecao": "Furever and Ashes",
       "preco": 45.0,
-      "imagem_src": "../assets/img/catalogo/catalogo4.jpeg"
+      "imagem_src": "../assets/img/catalogo/catalogo4.jpg"
     },
     {
       "id": 5,
-      "nome_produto:": "Conta Mimo",
-      "categoria": "Conta",
+      "nome_produto": "Conta Mimo",
+      "categoria": "conta",
       "descricao": "Conta em formato de coração ou lágrima dupla (pelo de um lado e cinzas do outro - ou amostras de animais diferentes)",
       "tamanho": "",
       "material": "aço inoxidável",
       "cor": "prateado e dourado",
       "nome_colecao": "Furever and Ashes",
       "preco": 65.0,
-      "imagem_src": "../assets/img/catalogo/catalogo5.jpeg"
+      "imagem_src": "../assets/img/catalogo/catalogo5.jpg"
     },
     {
       "id": 6,
-      "nome_produto:": "Colar Mimo",
-      "categoria": "Colar",
+      "nome_produto": "Colar Mimo",
+      "categoria": "colar",
       "descricao": "Colar Jasmim com cinzas em forma de coração ou círculo com apontamento brilhante",
       "tamanho": "",
       "material": "aço inoxidável",
       "cor": "prateado e dourado",
       "nome_colecao": "Furever and Ashes",
       "preco": 40.0,
-      "imagem_src": "../assets/img/catalogo/catalogo6.jpeg"
+      "imagem_src": "../assets/img/catalogo/catalogo6.jpg"
     },
     {
       "id": 7,
-      "nome_produto:": "Porta-chaves Luna",
-      "categoria": "Porta-chaves",
+      "nome_produto": "Porta-chaves Luna",
+      "categoria": "porta-chaves",
       "descricao": "Porta-chaves Luna com pelo ou cinzas em formato de coração ou pata",
       "tamanho": "",
       "material": "aço inoxidável",
       "cor": "prateado",
       "nome_colecao": "Furever and Ashes",
       "preco": 45.0,
-      "imagem_src": "../assets/img/catalogo/catalogo7.jpeg"
+      "imagem_src": "../assets/img/catalogo/catalogo7.jpg"
     },
     {
       "id": 8,
-      "nome_produto:": "Personalizado",
-      "categoria": "Personalizado",
+      "nome_produto": "Personalizado",
+      "categoria": "personalizado",
       "descricao": "Produto personalizado",
       "tamanho": "",
       "material": "",
       "cor": "",
       "nome_colecao": "",
       "preco": 0,
-      "imagem_src": "../assets/img/catalogo/catalogo8.jpeg"
+      "imagem_src": "../assets/img/catalogo/catalogo8.jpg"
+    },
+    {
+      "id": 9,
+      "nome_produto": "Anel Estrela",
+      "categoria": "news",
+      "descricao": "",
+      "tamanho": "",
+      "material": "",
+      "cor": "",
+      "nome_colecao": "Nova Coleção",
+      "preco": 0,
+      "imagem_src": "../assets/img/news/Anel_Estrela.png"
+    },
+    {
+      "id": 10,
+      "nome_produto": "Anel Infinity",
+      "categoria": "news",
+      "descricao": "",
+      "tamanho": "",
+      "material": "",
+      "cor": "",
+      "nome_colecao": "Nova Coleção",
+      "preco": 0,
+      "imagem_src": "../assets/img/news/Anel_Infinity.png"
+    },
+    {
+      "id": 11,
+      "nome_produto": "Anel Jasmim",
+      "categoria": "news",
+      "descricao": "",
+      "tamanho": "",
+      "material": "",
+      "cor": "",
+      "nome_colecao": "Nova Coleção",
+      "preco": 0,
+      "imagem_src": "../assets/img/news/Anel_Jasmim.png"
+    },
+    {
+      "id": 12,
+      "nome_produto": "Anel Leaf",
+      "categoria": "news",
+      "descricao": "",
+      "tamanho": "",
+      "material": "",
+      "cor": "",
+      "nome_colecao": "Nova Coleção",
+      "preco": 0,
+      "imagem_src": "../assets/img/news/Anel_Leaf.png"
     }
   ]
 }
