@@ -1,4 +1,4 @@
-# mirtilo_the_dog_webpage# Mirtilo the Dog 🐾
+# Mirtilo the Dog 🐾
 
 ---
 
