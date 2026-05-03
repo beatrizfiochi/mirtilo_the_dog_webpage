@@ -73,7 +73,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const filtrados = produtosDaCategoria.filter(function (produto) {
       // Produtos sem preço passam
-      if (produto.preco === 0) return true;
+      if (produto.preco === 0) {
+        return true;
+      }
       return produto.preco >= min && produto.preco <= max;
     });
 
