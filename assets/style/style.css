@@ -520,7 +520,6 @@ main h1 {
 }
 
 /* Campo morada (aparece apenas quando correio está selecionado) */
-#campo-morada-envio,
 #campo-morada-recepcao {
     overflow: hidden;
     max-height: 0;
@@ -528,7 +527,6 @@ main h1 {
     transition: max-height 0.35s ease, opacity 0.3s ease;
 }
 
-#campo-morada-envio.visivel,
 #campo-morada-recepcao.visivel {
     max-height: 120px;
     opacity: 1;

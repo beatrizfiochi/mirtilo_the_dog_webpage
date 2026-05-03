@@ -148,24 +148,24 @@
                         <p>Obrigada pelo seu pedido. Entraremos em contacto em breve para confirmar os detalhes. 🐾</p>
                     </div>
     
-                    <form id="formulario-pedido" novalidate>
+                    <form id="formulario-pedido" novalidate method="get" action="">
     
                         <!-- Dados pessoais -->
                         <p class="form-section-title">Dados pessoais</p>
                         <div class="row g-3 mb-3">
                             <div class="col-12">
                                 <label for="nome" class="form-label">Nome completo <span class="obrigatorio">*</span></label>
-                                <input type="text" class="form-control" id="nome" placeholder="O seu nome completo" required>
+                                <input type="text" name="nome" class="form-control" id="nome" placeholder="O seu nome completo" required>
                                 <div class="invalid-feedback">Por favor, introduza o seu nome completo.</div>
                             </div>
                             <div class="col-md-6">
                                 <label for="email" class="form-label">E-mail <span class="obrigatorio">*</span></label>
-                                <input type="email" class="form-control" id="email" placeholder="exemplo@email.com" required>
+                                <input type="email" name="email" class="form-control" id="email" placeholder="exemplo@email.com" required>
                                 <div class="invalid-feedback">Por favor, introduza um e-mail válido.</div>
                             </div>
                             <div class="col-md-6">
                                 <label for="telefone" class="form-label">Telefone <span class="obrigatorio">*</span></label>
-                                <input type="tel" class="form-control" id="telefone" placeholder="9XX XXX XXX" required>
+                                <input type="tel" name="telefone" class="form-control" id="telefone" placeholder="9XX XXX XXX" required>
                                 <div class="invalid-feedback">Por favor, introduza o seu número de telefone.</div>
                             </div>
                         </div>
@@ -174,7 +174,7 @@
                         <p class="form-section-title">Modelo(s)</p>
                         <div class="mb-3">
                             <label for="modelos-select" class="form-label">Modelo(s) pretendido(s) <span class="obrigatorio">*</span></label>
-                            <select id="modelos-select" class="form-select" multiple required>
+                            <select id="modelos-select" name="modelos" class="form-select" multiple required>
                             </select>
                             <div class="select-hint"><i class="bi bi-info-circle"></i> Mantenha Ctrl (Windows) ou ⌘ (Mac) pressionado para selecionar vários modelos.</div>
                             <div class="invalid-feedback">Por favor, selecione pelo menos um modelo.</div>
@@ -197,12 +197,6 @@
                             <div id="validacao-envio" class="invalid-feedback">Por favor, selecione como irá enviar a amostra.</div>
                         </div>
     
-                        <div id="campo-morada-envio" class="mb-3">
-                            <label for="morada-envio" class="form-label">Morada de envio da amostra <span class="obrigatorio">*</span></label>
-                            <input type="text" class="form-control" id="morada-envio" placeholder="Rua, número, código postal, cidade">
-                            <div class="invalid-feedback">Por favor, introduza a sua morada.</div>
-                        </div>
-    
                         <!-- Receção da peça final -->
                         <p class="form-section-title">Receção da peça final</p>
                         <div class="mb-3">
@@ -222,7 +216,7 @@
     
                         <div id="campo-morada-recepcao" class="mb-3">
                             <label for="morada-recepcao" class="form-label">Morada de entrega da peça <span class="obrigatorio">*</span></label>
-                            <input type="text" class="form-control" id="morada-recepcao" placeholder="Rua, número, código postal, cidade">
+                            <input type="text" name="morada-recepcao" class="form-control" id="morada-recepcao" placeholder="Rua, número, código postal, cidade">
                             <div class="invalid-feedback">Por favor, introduza a morada de entrega.</div>
                         </div>
     
@@ -230,7 +224,7 @@
                         <p class="form-section-title">Informações adicionais</p>
                         <div class="mb-4">
                             <label for="mensagem" class="form-label">Mensagem <span id="opcional">(opcional)</span></label>
-                            <textarea class="form-control" id="mensagem" rows="4" placeholder="Informações adicionais sobre o pedido, dúvidas, preferências..."></textarea>
+                            <textarea name="mensagem" class="form-control" id="mensagem" rows="4" placeholder="Informações adicionais sobre o pedido, dúvidas, preferências..."></textarea>
                         </div>
     
                         <p id="campos-obrigatorios"><span class="obrigatorio">*</span> Campos obrigatórios</p>
