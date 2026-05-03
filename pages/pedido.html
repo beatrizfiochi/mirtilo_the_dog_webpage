@@ -135,7 +135,7 @@
                             <br>
                             <span class="passo-numero">7</span>
                             <br>
-                            <span class="passo-texto">Aguarde a sua peça <span style="color: var(--violeta_intenso);">&#9829;</span></span>
+                            <span class="passo-texto">Aguarde a sua peça <span id="coracao">&#9829;</span></span>
                         </li>
                     </ul>
                 </div>
@@ -194,7 +194,7 @@
                                     <label for="envio-maos"><i class="bi bi-hand-index"></i> Em mãos (Porto)</label>
                                 </div>
                             </div>
-                            <div id="validacao-envio" class="invalid-feedback" style="display:none;">Por favor, selecione como irá enviar a amostra.</div>
+                            <div id="validacao-envio" class="invalid-feedback">Por favor, selecione como irá enviar a amostra.</div>
                         </div>
     
                         <div id="campo-morada-envio" class="mb-3">
@@ -217,7 +217,7 @@
                                     <label for="recepcao-maos"><i class="bi bi-hand-index"></i> Em mãos (Porto)</label>
                                 </div>
                             </div>
-                            <div id="validacao-recepcao" class="invalid-feedback" style="display:none;">Por favor, selecione como pretende receber a peça.</div>
+                            <div id="validacao-recepcao" class="invalid-feedback">Por favor, selecione como pretende receber a peça.</div>
                         </div>
     
                         <div id="campo-morada-recepcao" class="mb-3">
@@ -229,11 +229,11 @@
                         <!-- Mensagem -->
                         <p class="form-section-title">Informações adicionais</p>
                         <div class="mb-4">
-                            <label for="mensagem" class="form-label">Mensagem <span style="color: var(--violeta_escuro); font-weight: 400; font-size: 0.8rem;">(opcional)</span></label>
+                            <label for="mensagem" class="form-label">Mensagem <span id="opcional">(opcional)</span></label>
                             <textarea class="form-control" id="mensagem" rows="4" placeholder="Informações adicionais sobre o pedido, dúvidas, preferências..."></textarea>
                         </div>
     
-                        <p style="font-size: 0.8rem; color: var(--cinza); margin-bottom: 1rem;"><span class="obrigatorio">*</span> Campos obrigatórios</p>
+                        <p id="campos-obrigatorios"><span class="obrigatorio">*</span> Campos obrigatórios</p>
     
                         <button type="submit" class="btn-pedido">
                             <i class="bi bi-send me-2"></i>Enviar pedido
@@ -258,8 +258,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 
     <!-- MEU JS -->
-     <script src="../scripts/catalogo.js"></script>
+    <script src="../scripts/catalogo.js"></script>
     <script src="../scripts/produto.js"></script>
-
+    <script src="../scripts/pedido.js"></script>
 </body>
 </html>

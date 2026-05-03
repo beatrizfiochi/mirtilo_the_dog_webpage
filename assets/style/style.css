@@ -372,7 +372,7 @@ main h1 {
     background-color: var(--violeta_escuro);
     color: white;
     font-weight: 700;
-    font-size: 0.85rem;
+    font-size: 1.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -391,8 +391,12 @@ main h1 {
 }
 
 .passo-texto {
-    font-size: 1rem;
+    font-size: 1.3rem;
     line-height: 1.5;
+}
+
+#coracao {
+    color: var(--violeta_intenso);
 }
 
 /* formulário */
@@ -575,6 +579,23 @@ main h1 {
     letter-spacing: 0.08em;
     margin-bottom: 0.75rem;
     margin-top: 0.25rem;
+}
+
+#validacao-envio,
+#validacao-recepcao {
+    display: none;
+}
+
+#campos-obrigatorios {
+    font-size: 0.8rem; 
+    color: var(--cinza); 
+    margin-bottom: 1rem;
+}
+
+#opcional {
+    color: var(--violeta_escuro); 
+    font-weight: 400; 
+    font-size: 0.8rem;
 }
 
 /* ── Mensagem de sucesso ── */
