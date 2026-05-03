@@ -10,6 +10,8 @@
     --footer-h: 100px;
 }
 
+/* Estilização comum a todas as páginas */
+
 html, body {
     height: 100vh;
     overflow: hidden;
@@ -38,6 +40,48 @@ body {
     background-color: rgba(255, 255, 255, 0.1);
 }
 
+footer,
+footer a {
+    color: var(--cinza);
+}
+
+footer a:hover {
+    color: var(--violeta_escuro);
+}
+
+footer {
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    height: var(--footer-h);
+}
+
+/* Estilização página HOME */
+
+ /* rem - unidade relativa à fonte na root (root em)
+    vw - unidade relativa ao viweport (viewport width)
+    clamp() - proporciona um tamanho fluido com limites */
+main h1 {
+    color: var(--cinza);
+    font-size: clamp(1.4rem, 4vw, 65px); /* clamp(mínimo, preferido, máximo) */
+    max-width: 900px;
+    width: 90vw;
+    font-weight: 700;
+    padding: 0 1rem;
+}
+
+#frase-home {
+    color: var(--violeta_escuro);
+}
+
+.bi-infinity {
+    font-size: clamp(1.4rem, 4vw, 40px);
+    color: var(--cinza);
+}
+
+/* Estilização página SOBRE NÓS */
+
 #main-sobre {
     height: 100vh;
     padding-top: var(--navbar-h);
@@ -58,39 +102,6 @@ body {
     height: 40px;
     padding-right: 10px;
     text-align: center;
-}
-
-footer,
-footer a {
-    color: var(--cinza);
-}
-
-footer a:hover {
-    color: var(--violeta_escuro);
-}
-
-
-/*  rem - unidade relativa à fonte na root (root em)
-    vw - unidade relativa ao viweport (viewport width)
-    clamp() - proporciona um tamanho fluido com limites
-*/
-
-main h1 {
-    color: var(--cinza);
-    font-size: clamp(1.4rem, 4vw, 65px); /* clamp(mínimo, preferido, máximo) */
-    max-width: 900px;
-    width: 90vw;
-    font-weight: 700;
-    padding: 0 1rem;
-}
-
-#frase-home {
-    color: var(--violeta_escuro);
-}
-
-.bi-infinity {
-    font-size: clamp(1.4rem, 4vw, 40px);
-    color: var(--cinza);
 }
 
 #titulo-sobre {
@@ -136,18 +147,11 @@ main h1 {
     padding: 1rem 3rem 2rem;
 }
 
-footer {
-    padding: 1rem;
-    background-color: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    height: var(--footer-h);
-}
-
 .fw-bold {
     color: var(--violeta_intenso);
 }
 
+/* media query - essa regra será aplicada apenas quando o ecrã tem 1070px ou menos */
 @media (max-width: 1070px) {
     html, body {
         height: auto;
