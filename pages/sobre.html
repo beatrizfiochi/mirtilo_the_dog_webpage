@@ -33,27 +33,57 @@
             </div>
         </nav>
         <div class="offcanvas offcanvas-end minha-offcanvas navbar-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
-                    <div class="offcanvas-header">
-                        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel"><img id="offcanvas_img" src="../assets/img/logo/logo.ico" alt="">Mirtilo the Dog</h5>
-                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                    </div>
-                    <div class="offcanvas-body">
-                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                            <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="index.html">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link active" href="sobre.html">Sobre nós</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="catalogo.html">Catálogo</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Faça o seu pedido</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel"><img id="offcanvas_img" src="../assets/img/logo/logo.ico" alt="">Mirtilo the Dog</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="sobre.html">Sobre nós</a>
+                    </li>
+                    <li class="nav-item">
+                        <div class="accordion" id="accordionExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                <button class="accordion-button collapsed bg-transparent shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                    <a class="nav-link" href="catalogo.html">Catálogo</a>
+                                </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body pt-0">
+                                        <div>
+                                            <a id="todos" class="nav-link" href="catalogo.html">Todos</a>
+                                        </div>
+                                        <div>
+                                            <a id="colar" class="nav-link" href="catalogo.html">Colares</a>
+                                        </div>
+                                        <div>
+                                            <a id="conta" class="nav-link" href="catalogo.html">Contas</a>
+                                        </div>
+                                        <div>
+                                            <a id="porta-chaves" class="nav-link" href="catalogo.html">Porta-chaves</a>
+                                        </div>
+                                        <div>
+                                            <a id="personalizado" class="nav-link" href="catalogo.html">Personalize o seu</a>
+                                        </div>
+                                        <div>
+                                            <a id="news" class="nav-link" href="catalogo.html">Novidades</a>
+                                        </div> 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Faça o seu pedido</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </header>
     <main id="main-sobre" class="d-flex flex-grow-1">
         <div id="layout-sobre">
@@ -65,6 +95,9 @@
                         </div>
                         <div class="carousel-item">
                             <img src="../assets/img/carrosel/sobre2.jpeg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../assets/img/carrosel/sobre3.jpeg" class="d-block w-100" alt="...">
                         </div>
                         <div class="carousel-item">
                             <img src="../assets/img/carrosel/sobre4.jpeg" class="d-block w-100" alt="...">
