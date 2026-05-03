@@ -89,6 +89,28 @@
         <div id="titulo-catalogo" class="d-flex text-center justify-content-center">
             <h1>Catálogo</h1>
         </div>
+
+        <div id="filtro-preco">
+            <span style="font-weight: 600; color: var(--violeta_intenso);">
+                <i class="bi bi-funnel-fill me-1"></i>Preço
+            </span>
+            
+            <input type="number" id="precoMin" placeholder="Mín €" min="0">
+            
+            <span style="color: var(--violeta_escuro);">—</span>
+            
+            <input type="number" id="precoMax" placeholder="Máx €" min="0">
+            
+            <button id="btn-aplicar" onclick="aplicarFiltroPreco()" onmouseover="this.style.backgroundColor='var(--violeta_escuro)'"
+                onmouseout="this.style.backgroundColor='var(--violeta_intenso)'">
+                Aplicar
+            </button>
+            
+            <button id="btn-limpar" onclick="limparFiltroPreco()" onmouseover="this.style.backgroundColor='rgba(160,130,202,0.15)'"
+                onmouseout="this.style.backgroundColor='transparent'">
+                Limpar
+            </button>
+        </div>
         <div class="container">
             <div id="produtos" class="row justify-content-center"></div>
         </div>

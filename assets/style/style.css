@@ -206,6 +206,59 @@ main h1 {
     color: white;
 }
 
+/* Estilização página CATÁLOGO - FILTRO */
+
+#filtro-preco {
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 1.2rem;
+    background: rgba(255,255,255,0.35);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255,255,255,0.5);
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-size: 14px;
+    color: var(--cinza);
+}
+
+#filtro-preco input {
+    width: 80px;
+    padding: 5px 10px;
+    border: 1px solid var(--violeta_escuro);
+    border-radius: 20px;
+    background: rgba(255,255,255,0.6);
+    color: var(--cinza);
+    font-size: 13px;
+    text-align: center;
+    outline: none;
+}
+
+#filtro-preco #btn-aplicar {
+    padding: 5px 16px;
+    background-color: var(--violeta_intenso);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+#filtro-preco #btn-limpar {
+    padding: 5px 14px;
+    background: transparent;
+    color: var(--violeta_escuro);
+    border: 1px solid var(--violeta_escuro);
+    border-radius: 20px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
 /* Estilização página PRODUTO */
 
 #main-produto {
