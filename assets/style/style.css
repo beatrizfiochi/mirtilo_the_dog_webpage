@@ -86,6 +86,10 @@ footer {
     height: var(--footer-h);
 }
 
+.fw-bold {
+    color: var(--violeta_intenso);
+}
+
 /* Estilização página HOME */
 
  /* rem - unidade relativa à fonte na root (root em)
@@ -160,10 +164,6 @@ main h1 {
     padding: 1rem 3rem 2rem;
 }
 
-.fw-bold {
-    color: var(--violeta_intenso);
-}
-
 /* Estilização página CATÁLOGO */
 
 #titulo-catalogo h1 {
@@ -206,6 +206,66 @@ main h1 {
     color: white;
 }
 
+/* Estilização página PRODUTO */
+
+#main-produto {
+    padding-top: var(--navbar-h);
+    padding-bottom: calc(var(--footer-h) - 15px);
+    overflow: hidden;
+}
+
+#layout-produto {
+    display: grid;
+    grid-template-columns: 50% 1fr;
+    width: 100%;
+    height: 100%;
+}
+
+#imagem-produto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 20px;
+    text-align: center;
+}
+
+#imagem-produto img.produto-img {
+    width: 90%;
+    max-width: 380px;
+    height: auto;
+    border-radius: 12px;
+}
+
+#imagem-produto h1 {
+    color: var(--violeta_intenso);
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    margin-top: 1rem;
+}
+
+#info-produto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    overflow-y: auto;
+    padding: 2rem 3rem;
+    text-align: center;
+}
+
+.produto-acoes .btn {
+    background-color: var(--violeta_intenso);
+    color: white;
+    border: none;
+}
+
+.produto-acoes .btn:hover {
+    background-color: var(--violeta_escuro);
+    color: white;
+}
+
 /* media query - essa regra será aplicada apenas quando o ecrã tem 1070px ou menos */
 @media (max-width: 1070px) {
     html, body {
@@ -219,7 +279,8 @@ main h1 {
         overflow: visible;
     }
 
-    #layout-sobre {
+    #layout-sobre,
+    #layout-produto {
         display: block;
         height: auto;
     }
@@ -234,6 +295,16 @@ main h1 {
     }
 
     #texto-sobre {
+        overflow: visible;
+        height: auto;
+        padding-bottom: var(--footer-h);
+    }
+
+    #imagem-produto {
+        height: auto;
+    }
+
+    #info-produto {
         overflow: visible;
         height: auto;
         padding-bottom: var(--footer-h);
