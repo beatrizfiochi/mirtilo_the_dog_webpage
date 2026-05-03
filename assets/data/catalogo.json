@@ -1,0 +1,100 @@
+{
+  "catalogo_produtos": [
+    {
+      "id": 1,
+      "nome_produto:": "Colar Flor",
+      "categoria": "Colar",
+      "descricao": "Colar Flor com cinzas",
+      "tamanho": "12mm",
+      "material": "aço inoxidável",
+      "cor": "prateado",
+      "nome_colecao": "Furever and Ashes",
+      "preco": 60.0,
+      "imagem_src": "../assets/img/catalogo/catalogo1.jpeg"
+    },
+    {
+      "id": 2,
+      "nome_produto:": "Colar Céu",
+      "categoria": "Colar",
+      "descricao": "Colar Céu com cinzas e zircónia",
+      "tamanho": "12mm",
+      "material": "aço inoxidável",
+      "cor": "prateado e dourado",
+      "nome_colecao": "Furever and Ashes",
+      "preco": 60.0,
+      "imagem_src": "../assets/img/catalogo/catalogo2.jpeg"
+    },
+    {
+      "id": 3,
+      "nome_produto:": "Colar Sol",
+      "categoria": "Colar",
+      "descricao": "Colar Sol com cinzas",
+      "tamanho": "",
+      "material": "aço inoxidável",
+      "cor": "dourado",
+      "nome_colecao": "Furever and Ashes",
+      "preco": 60.0,
+      "imagem_src": "../assets/img/catalogo/catalogo3.jpeg"
+    },
+    {
+      "id": 4,
+      "nome_produto:": "Colar Jasmim",
+      "categoria": "Colar",
+      "descricao": "Colar Jasmim com pelo ou cinzas em forma de coração e com um toque floral",
+      "tamanho": "10mm",
+      "material": "aço inoxidável",
+      "cor": "prateado e dourado",
+      "nome_colecao": "Furever and Ashes",
+      "preco": 45.0,
+      "imagem_src": "../assets/img/catalogo/catalogo4.jpeg"
+    },
+    {
+      "id": 5,
+      "nome_produto:": "Conta Mimo",
+      "categoria": "Conta",
+      "descricao": "Conta em formato de coração ou lágrima dupla (pelo de um lado e cinzas do outro - ou amostras de animais diferentes)",
+      "tamanho": "",
+      "material": "aço inoxidável",
+      "cor": "prateado e dourado",
+      "nome_colecao": "Furever and Ashes",
+      "preco": 65.0,
+      "imagem_src": "../assets/img/catalogo/catalogo5.jpeg"
+    },
+    {
+      "id": 6,
+      "nome_produto:": "Colar Mimo",
+      "categoria": "Colar",
+      "descricao": "Colar Jasmim com cinzas em forma de coração ou círculo com apontamento brilhante",
+      "tamanho": "",
+      "material": "aço inoxidável",
+      "cor": "prateado e dourado",
+      "nome_colecao": "Furever and Ashes",
+      "preco": 40.0,
+      "imagem_src": "../assets/img/catalogo/catalogo6.jpeg"
+    },
+    {
+      "id": 7,
+      "nome_produto:": "Porta-chaves Luna",
+      "categoria": "Porta-chaves",
+      "descricao": "Porta-chaves Luna com pelo ou cinzas em formato de coração ou pata",
+      "tamanho": "",
+      "material": "aço inoxidável",
+      "cor": "prateado",
+      "nome_colecao": "Furever and Ashes",
+      "preco": 45.0,
+      "imagem_src": "../assets/img/catalogo/catalogo7.jpeg"
+    },
+    {
+      "id": 8,
+      "nome_produto:": "Personalizado",
+      "categoria": "Personalizado",
+      "descricao": "Produto personalizado",
+      "tamanho": "",
+      "material": "",
+      "cor": "",
+      "nome_colecao": "",
+      "preco": 0,
+      "imagem_src": "../assets/img/catalogo/catalogo8.jpeg"
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "nova_colecao": [
+    {
+      "id": 1,
+      "nome_produto:": "Anel Estrela",
+      "categoria": "Anel",
+      "descricao": "",
+      "tamanho": "",
+      "material": "",
+      "cor": "",
+      "nome_colecao": "Nova Coleção",
+      "preco": 0,
+      "imagem_src": "../assets/img/news/Anel_Estrela.png"
+    },
+    {
+      "id": 2,
+      "nome_produto:": "Anel Infinity",
+      "categoria": "Anel",
+      "descricao": "",
+      "tamanho": "",
+      "material": "",
+      "cor": "",
+      "nome_colecao": "Nova Coleção",
+      "preco": 0,
+      "imagem_src": "../assets/img/news/Anel_Infinity.png"
+    },
+    {
+      "id": 3,
+      "nome_produto:": "Anel Jasmim",
+      "categoria": "Anel",
+      "descricao": "",
+      "tamanho": "",
+      "material": "",
+      "cor": "",
+      "nome_colecao": "Nova Coleção",
+      "preco": 0,
+      "imagem_src": "../assets/img/news/Anel_Jasmim.png"
+    },
+    {
+      "id": 4,
+      "nome_produto:": "Anel Leaf",
+      "categoria": "Anel",
+      "descricao": "",
+      "tamanho": "",
+      "material": "",
+      "cor": "",
+      "nome_colecao": "Nova Coleção",
+      "preco": 0,
+      "imagem_src": "../assets/img/news/Anel_Leaf.png"
+    }
+  ]
+}
