@@ -175,6 +175,18 @@ main h1 {
     padding: 1rem 1rem 0.5rem;
 }
 
+#produtos .card-img-top {
+  width: 100%;
+  height: 400px;
+}
+
+#main-catalogo {
+    padding-top: var(--navbar-h);
+    padding-bottom: calc(var(--footer-h) - 15px);
+    overflow: auto;
+    justify-content: flex-start;
+}
+
 /* media query - essa regra será aplicada apenas quando o ecrã tem 1070px ou menos */
 @media (max-width: 1070px) {
     html, body {
