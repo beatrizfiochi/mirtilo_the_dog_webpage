@@ -104,17 +104,13 @@ main h1 {
     text-align: center;
 }
 
-#titulo-sobre {
-    padding: 1rem 1rem 0.5rem;
-}
-
 #titulo-sobre h1{
     color: var(--violeta_intenso);
     font-size: clamp(1.4rem, 4vw, 35px);
     max-width: 900px;
     width: 90vw;
     font-weight: 700;
-    padding: 0 1rem;
+    padding: 1rem 1rem 0.5rem;
 }
 
 #layout-sobre {
