@@ -52,6 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 ? `<p class="card-text fw-bold">${produto.preco.toFixed(2)} €</p>`
                 : `<p class="card-text fw-bold">Preço sob consulta</p>`
                 }
+                <a class="btn btn-catalogo" href="#" role="button">Ver mais</a>
             </div>
             </div>
         `;
