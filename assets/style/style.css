@@ -113,6 +113,35 @@ main h1 {
     color: var(--cinza);
 }
 
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.back-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    object-fit: cover;
+    opacity: 0.3;
+}
+
+/* garante que o texto fica por cima do vídeo */
+.video-container h1,
+.video-container .bi-infinity {
+    position: relative;
+    z-index: 1;
+}
+
 /* Estilização página SOBRE NÓS */
 
 #main-sobre {
