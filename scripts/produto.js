@@ -72,11 +72,20 @@ document.addEventListener("DOMContentLoaded", function () {
             </p>
 
             <div class="produto-acoes mt-3">
-            <a href="catalogo.html" class="btn">← Voltar</a>
+            <a href="#" id="btn-voltar" class="btn">← Voltar</a>
             </div>
 
         </div>
         `;
+
+        document.getElementById("btn-voltar").addEventListener("click", function (e) {
+          e.preventDefault();
+          if (document.referrer) {
+            history.back();
+          } else {
+            window.location.href = "catalogo.html";
+          }
+        });
     })
     .catch(function (erro) {
       console.error("Erro ao carregar o produto:", erro);
