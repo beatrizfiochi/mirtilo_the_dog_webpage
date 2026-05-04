@@ -3,6 +3,10 @@ document.addEventListener("DOMContentLoaded", function () {
   const parametros = new URLSearchParams(window.location.search);
   const categoriaEscolhida = parametros.get("categoria") || "todos";
 
+  // Lê os valores de preço ao carregar
+  const precoMinURL = parametros.get("precoMin");
+  const precoMaxURL = parametros.get("precoMax");
+
   // Guarda os produtos da categoria atual para o filtro de preço poder usá-los
   let produtosDaCategoria = [];
 
@@ -59,7 +63,25 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("filtro-preco").style.display = "flex";
       }
 
-      renderizarCards(produtosDaCategoria);
+      // Se havia filtro de preço no URL, aplica-o automaticamente
+      // Implementado para ser utilizado no btn-voltar
+      if (precoMinURL || precoMaxURL) {
+        if (precoMinURL) document.getElementById("precoMin").value = precoMinURL;
+        if (precoMaxURL) document.getElementById("precoMax").value = precoMaxURL;
+
+        const min = parseFloat(precoMinURL) || 0;
+        const max = parseFloat(precoMaxURL) || Infinity;
+
+        const filtrados = produtosDaCategoria.filter(function (produto) {
+          if (produto.preco === 0) return true;
+          return produto.preco >= min && produto.preco <= max;
+        });
+
+        renderizarCards(filtrados);
+      } else {
+        renderizarCards(produtosDaCategoria);
+      }
+
     })
     .catch(function (erro) {
       console.error("Erro ao carregar o catálogo:", erro);
@@ -70,6 +92,20 @@ document.addEventListener("DOMContentLoaded", function () {
   window.aplicarFiltroPreco = function () {
     const min = parseFloat(document.getElementById("precoMin").value) || 0;
     const max = parseFloat(document.getElementById("precoMax").value) || Infinity;
+
+    // Guarda os valores no URL sem recarregar a página
+    const params = new URLSearchParams(window.location.search);
+    if (document.getElementById("precoMin").value) {
+      params.set("precoMin", document.getElementById("precoMin").value);
+    } else {
+      params.delete("precoMin");
+    }
+    if (document.getElementById("precoMax").value) {
+      params.set("precoMax", document.getElementById("precoMax").value);
+    } else {
+      params.delete("precoMax");
+    }
+    history.replaceState(null, "", "?" + params.toString());
 
     const filtrados = produtosDaCategoria.filter(function (produto) {
       // Produtos sem preço passam
@@ -86,6 +122,14 @@ document.addEventListener("DOMContentLoaded", function () {
   window.limparFiltroPreco = function () {
     document.getElementById("precoMin").value = "";
     document.getElementById("precoMax").value = "";
+
+    // Remove os parâmetros de preço do URL
+    const params = new URLSearchParams(window.location.search);
+    params.delete("precoMin");
+    params.delete("precoMax");
+    const novoURL = params.toString() ? "?" + params.toString() : window.location.pathname;
+    history.replaceState(null, "", novoURL);
+
     renderizarCards(produtosDaCategoria);
   };
 
