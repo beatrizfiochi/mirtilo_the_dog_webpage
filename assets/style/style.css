@@ -132,14 +132,29 @@ main h1 {
     height: 100%;
     z-index: 0;
     object-fit: cover;
+    object-position: center;
     opacity: 0.3;
 }
 
 /* garante que o texto fica por cima do vídeo */
 .video-container h1,
-.video-container .bi-infinity {
+.video-container .bi-infinity,
+.video-container .btn-index {
     position: relative;
     z-index: 1;
+}
+
+.video-container .btn-index a {
+    background-color: var(--violeta_escuro);
+    border-radius: 35px;
+    padding: 10px;
+    margin: 5px;
+    text-decoration: none;
+    color: var(--branco_violeta);
+}
+
+.video-container .btn-index a:hover {
+    background-color: var(--violeta_intenso);
 }
 
 /* Estilização página SOBRE NÓS */
