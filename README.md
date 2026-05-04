@@ -58,3 +58,7 @@ Webpage institucional e de catálogo para a marca **Mirtilo the Dog**, um projet
 ---
 
 Desenvolvido por [@beatrizfiochi](https://github.com/beatrizfiochi)
+
+[Repositório](https://github.com/beatrizfiochi/mirtilo_the_dog_webpage)
+
+[Github Pages](https://beatrizfiochi.github.io/mirtilo_the_dog_webpage/pages/index.html)
