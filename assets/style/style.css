@@ -151,10 +151,13 @@ main h1 {
     margin: 5px;
     text-decoration: none;
     color: var(--branco_violeta);
+    display: inline-block;
+    transition: transform 0.2s ease;
 }
 
 .video-container .btn-index a:hover {
     background-color: var(--violeta_intenso);
+    transform: scale(1.1);
 }
 
 /* Estilização página SOBRE NÓS */
