@@ -568,7 +568,7 @@ main h1 {
     font-size: 0.8rem;
 }
 
-/* Separador entre secções */
+/* Separador entre seções */
 .form-section-title {
     color: var(--violeta_escuro);
     font-size: 0.8rem;
@@ -596,7 +596,7 @@ main h1 {
     font-size: 0.8rem;
 }
 
-/* ── Mensagem de sucesso ── */
+/* Mensagem de sucesso */
 #mensagem-sucesso {
     display: none;
     text-align: center;
