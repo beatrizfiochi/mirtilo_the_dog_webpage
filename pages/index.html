@@ -1,113 +1,470 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
     <title>Mirtilo the Dog</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
     <!--FAVICON-->
-    <link rel="shortcut icon" href="../assets/img/logo/logo.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../../assets/img/logo/logo.ico" type="image/x-icon">
 
-    <!--BOOTSTRAP CSS-->
-    <link rel="stylesheet" href="../assets/style/bootstrap.min.css">
-
-    <!--BOOTSTRAP ICONS-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-
-    <!--GOOGLE FONTS - NUNITO -->
+    <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet"> 
 
-    <!--MEU CSS-->
-    <link rel="stylesheet" href="../assets/style/style.css">
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
 </head>
-<body class="d-flex flex-column min-vh-100">
-    <header>
-        <nav class="navbar navbar-dark bg-transparent fixed-top">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="index.html"><img src="../assets/img/logo/logo_mirtilo.png" alt="logotipo"></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" role="status"></div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Topbar Start -->
+    <div class="container-fluid top-bar bg-dark text-light px-0 wow fadeIn" data-wow-delay="0.1s">
+        <div class="row gx-0 align-items-center d-none d-lg-flex">
+            <div class="col-lg-6 px-5 text-start">
+                <ol class="breadcrumb mb-0">
+                    <li><a class="small text-light" href="#"></a></li>
+                    <li><a class="small text-light" href="#"></a></li>
+                    <li><a class="small text-light" href="#"></a></li>
+                    <li><a class="small text-light" href="#"></a></li>
+                </ol>
             </div>
-        </nav>
-        <div class="offcanvas offcanvas-end minha-offcanvas navbar-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
-            <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel"><img id="offcanvas_img" src="../assets/img/logo/logo.ico" alt="">Mirtilo the Dog</h5>
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            <div class="col-lg-6 px-5 text-end">
+                <div class="h-100 d-inline-flex align-items-center">
+                    <a class="btn-lg-square border-end rounded-0" href="https://www.facebook.com/mirtilothedog"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn-lg-square pe-0" href="https://www.instagram.com/mirtilothedog/"><i class="fab fa-instagram"></i></a>
+                </div>
             </div>
-            <div class="offcanvas-body">
-                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="sobre.html">Sobre nós</a>
-                    </li>
-                    <li class="nav-item">
-                        <div class="accordion" id="accordionExample">
-                            <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                <button class="accordion-button collapsed bg-transparent shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                                    <a class="nav-link" href="catalogo.html">Catálogo</a>
-                                </button>
-                                </h2>
-                                <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body pt-0">
-                                        <div>
-                                            <a class="nav-link" href="catalogo.html?categoria=todos">Todos</a>
-                                        </div>
-                                        <div>
-                                            <a class="nav-link" href="catalogo.html?categoria=colar">Colares</a>
-                                        </div>
-                                        <div>
-                                            <a class="nav-link" href="catalogo.html?categoria=conta">Contas</a>
-                                        </div>
-                                        <div>
-                                            <a class="nav-link" href="catalogo.html?categoria=porta-chaves">Porta-chaves</a>
-                                        </div>
-                                        <div>
-                                            <a class="nav-link" href="catalogo.html?categoria=personalizado">Personalize o seu</a>
-                                        </div>
-                                        <div>
-                                            <a class="nav-link" href="catalogo.html?categoria=news">Novidades</a>
-                                        </div> 
-                                    </div>
-                                </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top py-lg-0 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
+        <a href="index.html" class="navbar-brand ms-4 ms-lg-0">
+            <h1 class="m-0">Mirtilo the Dog</h1>
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav mx-auto p-4 p-lg-0">
+                <a href="index.html" class="nav-item nav-link active">Home</a>
+                <a href="about.html" class="nav-item nav-link">Sobre nós</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Catálogo</a>
+                    <div class="dropdown-menu m-0">
+                        <a href="product.html?categoria=todos" class="dropdown-item">Todos</a>
+                        <a href="product.html?categoria=colar" class="dropdown-item">Colares</a>
+                        <a href="product.html?categoria=conta" class="dropdown-item">Contas</a>
+                        <a href="product.html?categoria=porta-chaves" class="dropdown-item">Porta-chaves</a>
+                        <a href="product.html?categoria=personalizado" class="dropdown-item">Personalize o seu</a>
+                        <a href="product.html?categoria=news" class="dropdown-item">Novidades</a>
+                    </div>
+                </div>
+                <a href="contact.html" class="nav-item nav-link">Faça o seu pedido</a>
+                <a href="" class="nav-item nav-link">Login</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+
+    <!-- Carousel Start -->
+    <div class="container-fluid p-0 pb-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="owl-carousel header-carousel position-relative">
+            <div class="owl-carousel-item position-relative">
+                <img class="img-fluid" src="../assets/img/catalogo/catalogo1.jpg" alt="">
+                <div class="owl-carousel-inner">
+                    <div class="container">
+                        <div class="row justify-content-start">
+                            <div class="col-lg-8">
+                                <p class="text-uppercase fw-bold mb-2 text-primary">// Uma marca Portuguesa</p>
+                                <h1 class="display-1 text-light mb-4 animated slideInDown">Criada à mão para guardar um vínculo que não termina</h1>
+                                <a href="product.html" class="btn btn-primary rounded-pill py-3 px-5 violeta-bg">Ver catálogo</a>
                             </div>
                         </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="pedido.html">Faça o seu pedido</a>
-                    </li>
-                </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="owl-carousel-item position-relative">
+                <img class="img-fluid" src="../assets/img/catalogo/catalogo5.jpg" alt="">
+                <div class="owl-carousel-inner">
+                    <div class="container">
+                        <div class="row justify-content-start">
+                            <div class="col-lg-8">
+                                <p class="text-uppercase fw-bold mb-2 text-primary">// Memórias únicas</p>
+                                <h1 class="display-1 text-light mb-4 animated slideInDown">Eternize o seu animal de estimação</h1>
+                                <a href="product.html" class="btn btn-primary rounded-pill py-3 px-5 violeta-bg">Ver catálogo</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </header>
-    <main class="d-flex flex-column align-items-center justify-content-center flex-grow-1 text-center">
-        <div class="video-container">
-            <video class="back-video" src="../assets/video/video_index.mp4" autoplay loop muted playsinline ></video>
-            <h1>Criada à mão para guardar um <span id="frase-home">vínculo que não termina</span></h1>
-            <div><i class="bi bi-infinity"></i></div>
-            <div class="btn-index p-3">
-                <a href="catalogo.html">Ver Catálogo</a>
-                <a href="sobre.html">Sobre nós</a>
-                <a href="pedido.html">Fazer pedido</a>
-            </div>
-        </div>
-    </main>
-    <footer class="container-fluid text-center p-3 mt-auto fixed-bottom">
-        <div class="row">
-            <div>
-                <p>&copy; Mirtilo the Dog</p>
-                <a href="https://www.facebook.com/mirtilothedog" target="_blank"><i class="bi bi-facebook mx-5"></i></a>
-                <a href="https://www.instagram.com/mirtilothedog/" target="_blank"><i class="bi bi-instagram mx-5"></i></a>
-            </div>
-        </div>
-    </footer>
+    </div>
+    <!-- Carousel End -->
 
-    <!--BOOTSTRAP JS-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+    <!-- Facts Start -->
+    <div class="container-xxl py-6">
+        <div class="container">
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-3 col-md-6 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="fact-item bg-light rounded text-center h-100 p-5">
+                        <i class="fa fa-certificate fa-4x text-primary mb-4"></i>
+                        <p class="mb-2">Anos de experiência</p>
+                        <h1 class="display-5 mb-0" data-toggle="counter-up">07</h1>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeIn" data-wow-delay="0.5s">
+                    <div class="fact-item bg-light rounded text-center h-100 p-5">
+                        <i class="fa fa-gem fa-4x text-primary mb-4"></i>
+                        <p class="mb-2">Total de produtos</p>
+                        <h1 class="display-5 mb-0" data-toggle="counter-up">12</h1>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeIn" data-wow-delay="0.7s">
+                    <div class="fact-item bg-light rounded text-center h-100 p-5">
+                        <i class="fa fa-cart-plus fa-4x text-primary mb-4"></i>
+                        <p class="mb-2">Encomendas por dia</p>
+                        <h1 class="display-5 mb-0" data-toggle="counter-up">10</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Facts End -->
+
+
+    <!-- About Start -->
+    <div class="container-xxl py-6">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="row img-twice position-relative h-100">
+                        <div class="col-6">
+                            <img class="img-fluid rounded" src="../assets/img/carrosel/sobre1.jpeg" alt="">
+                        </div>
+                        <div class="col-6 align-self-end">
+                            <img class="img-fluid rounded" src="../assets/img/carrosel/sobre3.jpeg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="h-100">
+                        <p class="text-primary text-uppercase mb-2">// Sobre nós</p>
+                        <h1 class="display-6 mb-4">Peças criadas com respeito, cuidado e significado.</h1>
+                        <p>A Mirtilo the Dog nasceu em 2019, inspirada pelo amor profundo entre humanos e animais. Criada por Rosália, enfermeira veterinária, a marca surgiu do desejo de eternizar memórias e transformar ligações especiais em peças únicas.</p>
+                        <p>Depois de um percurso entre biscoitos, acessórios e identificação pet, foi na resina — preservando pequenos pedaços de quem amamos — que a marca encontrou o seu verdadeiro propósito.</p>
+                        <p>Hoje, cada criação é feita de forma artesanal, com significado, delicadeza e emoção, para que cada tutor possa guardar para sempre um pedacinho da sua história.</p>
+                        <div class="row g-2 mb-4">
+                            <div class="col-sm-6">
+                                <i class="fa fa-check text-primary me-2"></i>Peças artesanais e personalizadas
+                            </div>
+                            <div class="col-sm-6">
+                                <i class="fa fa-check text-primary me-2"></i>Memórias eternizadas em resina
+                            </div>
+                            <div class="col-sm-6">
+                                <i class="fa fa-check text-primary me-2"></i>Criações únicas
+                            </div>
+                            <div class="col-sm-6">
+                                <i class="fa fa-check text-primary me-2"></i>Feito com amor, significado e cuidado
+                            </div>
+                        </div>
+                        <a class="btn btn-primary rounded-pill py-3 px-5 violeta-bg" href="about.html">Saiba mais</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+
+    <!-- Product Start -->
+    <div class="container-xxl bg-light my-6 py-6 pt-0">
+        <div class="container">
+            <div class="violeta-bg text-light rounded-bottom p-5 my-6 mt-0 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="row g-4 align-items-center">
+                    <div class="col-lg-6">
+                        <h1 class="display-4 text-light mb-0">Jóias e peças que mantêm memórias vivas.</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+                <p class="text-primary text-uppercase mb-2">// Produtos</p>
+                <h1 class="display-6 mb-4">Conheça nossas peças</h1>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="product-item d-flex flex-column bg-white rounded overflow-hidden h-100">
+                        <div class="text-center p-4">
+                            <h3 class="mb-3">Colares</h3>
+                        </div>
+                        <div class="product-img-wrapper mt-auto">  <!-- overlay dentro do wrapper -->
+                            <img src="../assets/img/catalogo/catalogo1.jpg" alt="Colares">
+                            <div class="product-overlay">
+                                <a class="btn btn-lg-square btn-outline-light rounded-circle" href="">
+                                    <i class="fa fa-eye"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="product-item d-flex flex-column bg-white rounded overflow-hidden h-100">
+                        <div class="text-center p-4">
+                            <h3 class="mb-3">Contas</h3>
+                        </div>
+                        <div class="product-img-wrapper mt-auto">
+                            <img src="../assets/img/catalogo/catalogo5.jpg" alt="Contas">
+                            <div class="product-overlay">
+                                <a class="btn btn-lg-square btn-outline-light rounded-circle" href="">
+                                    <i class="fa fa-eye"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="product-item d-flex flex-column bg-white rounded overflow-hidden h-100">
+                        <div class="text-center p-4">
+                            <h4 class="mb-3">Personalize o seu</h4>
+                        </div>
+                        <div class="product-img-wrapper mt-auto">
+                            <img src="../assets/img/catalogo/catalogo8.jpg" alt="Personalize o seu">
+                            <div class="product-overlay">
+                                <a class="btn btn-lg-square btn-outline-light rounded-circle" href="">
+                                    <i class="fa fa-eye"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Product End -->
+
+
+    <!-- Order Start -->
+    <div class="container-xxl py-6">
+        <div class="container">
+            <!-- Título -->
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+                <p class="text-primary text-uppercase mb-2">// Encomendas</p>
+                <h1 class="display-6 mb-4">Como fazer o seu pedido</h1>
+                <p>Fazemos cada peça com dedicação e cuidado. Siga os passos abaixo para garantir que o seu pedido corre da melhor forma possível.</p>
+            </div>
+
+            <!-- Passos 1 a 6 -->
+            <div class="row g-4 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="col-lg-4 col-md-6 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="d-flex align-items-center mb-2">
+                        <div class="flex-shrink-0 btn-square bg-primary rounded-circle me-3">
+                            <span class="text-white fw-bold">1</span>
+                        </div>
+                        <h5 class="mb-0">Escolha o modelo</h5>
+                    </div>
+                    <span>Veja o nosso catálogo e escolha o modelo que pretende.</span>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeIn" data-wow-delay="0.2s">
+                    <div class="d-flex align-items-center mb-2">
+                        <div class="flex-shrink-0 btn-square bg-primary rounded-circle me-3">
+                            <span class="text-white fw-bold">2</span>
+                        </div>
+                        <h5 class="mb-0">Preencha o formulário</h5>
+                    </div>
+                    <span>Preencha o formulário com as informações do pedido.</span>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeIn" data-wow-delay="0.3s">
+                    <div class="d-flex align-items-center mb-2">
+                        <div class="flex-shrink-0 btn-square bg-primary rounded-circle me-3">
+                            <span class="text-white fw-bold">3</span>
+                        </div>
+                        <h5 class="mb-0">Confirmação de contacto</h5>
+                    </div>
+                    <span>Aguarde pela confirmação do contacto da nossa parte.</span>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeIn" data-wow-delay="0.4s">
+                    <div class="d-flex align-items-center mb-2">
+                        <div class="flex-shrink-0 btn-square bg-primary rounded-circle me-3">
+                            <span class="text-white fw-bold">4</span>
+                        </div>
+                        <h5 class="mb-0">Envie a amostra</h5>
+                    </div>
+                    <span>Envie pelo correio ou entregue em mãos <em>(Porto)</em>.</span>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeIn" data-wow-delay="0.5s">
+                    <div class="d-flex align-items-center mb-2">
+                        <div class="flex-shrink-0 btn-square bg-primary rounded-circle me-3">
+                            <span class="text-white fw-bold">5</span>
+                        </div>
+                        <h5 class="mb-0">Início da produção</h5>
+                    </div>
+                    <span>Aguarde a confirmação da receção da amostra e início da produção.</span>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeIn" data-wow-delay="0.6s">
+                    <div class="d-flex align-items-center mb-2">
+                        <div class="flex-shrink-0 btn-square bg-primary rounded-circle me-3">
+                            <span class="text-white fw-bold">6</span>
+                        </div>
+                        <h5 class="mb-0">Pagamento</h5>
+                    </div>
+                    <span>Efetue o pagamento e aguarde pela fotografia da peça pronta <em>(cerca de 2 semanas)</em>.</span>
+                </div>
+            </div>
+
+            <!-- Passo 7 centrado -->
+            <div class="row justify-content-center mt-4 wow fadeIn" data-wow-delay="0.7s">
+                <div class="col-lg-4 col-md-6">
+                    <div class="order-final-step rounded p-4 text-center">
+                        <div class="d-flex align-items-center justify-content-center mb-2">
+                            <div class="flex-shrink-0 btn-square bg-primary rounded-circle me-3">
+                                <span class="text-white fw-bold">7</span>
+                            </div>
+                            <h5 class="mb-0">Receba a sua peça ♥</h5>
+                        </div>
+                        <span>A sua memória transformada numa jóia única chega até si.</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- Order End -->
+
+    <!-- Testimonial Start -->
+    <div class="container-xxl bg-light my-6 py-6 pb-0">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+                <p class="text-primary text-uppercase mb-2">// Testemunhos</p>
+                <h1 class="display-6 mb-4">Mais de 150+ memórias eternizadas</h1>
+            </div>
+            <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
+                <div class="testimonial-item bg-white rounded p-4">
+                    <div class="d-flex align-items-center mb-4">
+                        <img class="flex-shrink-0 rounded-circle border p-1" src="../assets/img/catalogo/catalogo8.jpg" alt="">
+                        <div class="ms-4">
+                            <h5 class="mb-1">Lucky</h5>
+                        </div>
+                    </div>
+                    <p class="mb-0">Um mês após a sua partida para o céu dos gatinhos, o Lucky volta com toda essa delicadeza, pormenor e amor. Um obrigada é pouco para todo o carinho que teve para comigo, com o Lucky e por ter captado tão bem a essência e amor que sinto por ele, que será eterno.</p>
+                </div>
+                <div class="testimonial-item bg-white rounded p-4">
+                    <div class="d-flex align-items-center mb-4">
+                        <img class="flex-shrink-0 rounded-circle border p-1" src="../assets/img/catalogo/catalogo2.jpg" alt="">
+                        <div class="ms-4">
+                            <h5 class="mb-1">Dora</h5>
+                        </div>
+                    </div>
+                    <p class="mb-0">Há trabalhos bonitos... e depois há trabalhos com alma. Este tipo de arte exige não só talento, mas também um coração enorme. Obrigada por ajudares a eternizar quem tanto nos deu.</p>
+                </div>
+                <div class="testimonial-item bg-white rounded p-4">
+                    <div class="d-flex align-items-center mb-4">
+                        <img class="flex-shrink-0 rounded-circle border p-1" src="../assets/img/catalogo/catalogo3.jpg" alt="">
+                        <div class="ms-4">
+                            <h5 class="mb-1">Ballú</h5>
+                        </div>
+                    </div>
+                    <p class="mb-0">Muito obrigada, por todo o cuidado, carinho e dedicação, criou algo verdadeiramente especial, extamanete como o Ballú merece.</p>
+                </div>
+                <div class="testimonial-item bg-white rounded p-4">
+                    <div class="d-flex align-items-center mb-4">
+                        <img class="flex-shrink-0 rounded-circle border p-1" src="../assets/img/catalogo/catalogo5.jpg" alt="">
+                        <div class="ms-4">
+                            <h5 class="mb-1">Salvador</h5>
+                        </div>
+                    </div>
+                    <p class="mb-0">Temos as nossas peças do nosso Salvador. Cada peça carrega uma história, um amor que continua vivo. Um trabalho lindíssimo, feito com uma sensibilidade rara.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Testimonial End -->
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light footer my-6 mb-0 py-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4">Contactos</h4>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Porto, Portugal</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+351 914 789 211</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>mirtilothedog@gmail.com</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-square btn-outline-light rounded-circle me-1" href="https://www.facebook.com/mirtilothedog"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-square btn-outline-light rounded-circle me-1" href="https://www.instagram.com/mirtilothedog/"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4">Links</h4>
+                    <a class="btn btn-link" href="about.html">Sobre nós</a>
+                    <a class="btn btn-link" href="product.html">Catálogo</a>
+                    <a class="btn btn-link" href="contact.html">Faça o seu pedido</a>
+                    <a class="btn btn-link" href="">Login</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Copyright Start -->
+    <div class="container-fluid copyright text-light py-4 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    &copy; <a href="index.html">Mirtilo The Dog</a>, Todos os direitos reservados.
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                    Desenvolvido por <a href="https://www.linkedin.com/in/beatriz-fiochi/">Beatriz Fiochi</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Copyright End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg violeta-bg btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
 </body>
+
 </html>

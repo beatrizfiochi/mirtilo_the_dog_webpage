@@ -45,10 +45,10 @@ function configurarMorada(grupoId, campoId, inputId) {
     radios.forEach(radio => {
         radio.addEventListener('change', () => {
             if (radio.value === 'correio' && radio.checked) {
-                campo.classList.add('visivel');
+                campo.style.display = 'block';
                 input.required = true;
             } else if (radio.value === 'maos' && radio.checked) {
-                campo.classList.remove('visivel');
+                campo.style.display = 'none';
                 input.required = false;
                 input.value = '';
                 input.classList.remove('is-invalid');

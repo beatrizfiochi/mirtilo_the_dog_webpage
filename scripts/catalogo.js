@@ -11,36 +11,59 @@ document.addEventListener("DOMContentLoaded", function () {
   let produtosDaCategoria = [];
 
   function renderizarCards(lista) {
-    const divProdutos = document.getElementById("produtos");
+        const divProdutos = document.getElementById("produtos");
 
-    if (lista.length === 0) {
-      divProdutos.innerHTML = `<p class="text-center mt-4" style="color: var(--cinza)">Nenhum produto encontrado neste intervalo de preço.</p>`;
-      return;
+        if (lista.length === 0) {
+            divProdutos.innerHTML = `
+                <p class="text-center mt-4" style="color: var(--cinza)">
+                    Nenhum produto encontrado neste intervalo de preço.
+                </p>`;
+            return;
+        }
+
+        divProdutos.innerHTML = "";
+
+        lista.forEach(function (produto, index) {
+            const delays = ["0.1s", "0.3s", "0.5s"];
+            const delay = delays[index % 3];
+
+            const coluna = document.createElement("div");
+            coluna.className = "col-lg-4 col-md-6 wow fadeInUp";
+            coluna.setAttribute("data-wow-delay", delay);
+
+            coluna.innerHTML = `
+                <div class="product-item d-flex flex-column bg-white rounded overflow-hidden h-100">
+                    <div class="text-center p-4">
+                        ${produto.preco > 0
+                            ? `<div class="d-inline-block border border-primary rounded-pill px-3 mb-3">
+                                  ${produto.preco.toFixed(2)} €
+                              </div>`
+                            : `<div class="d-inline-block border border-primary rounded-pill px-3 mb-3">
+                                  Preço sob consulta
+                              </div>`
+                        }
+                        <h3 class="mb-3">${produto.nome_produto}</h3>
+                    </div>
+                    <div class="product-img-wrapper mt-auto">
+                        <img src="${produto.imagem_src}" alt="${produto.nome_produto}">
+                        <div class="product-overlay">
+                            <a class="btn btn-lg-square btn-outline-light rounded-circle"
+                              href="produto.html?id=${produto.id}">
+                                <i class="fa fa-eye"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            divProdutos.appendChild(coluna);
+        });
+
+        // Reinicia as animações WOW nos novos cards
+        if (typeof WOW !== "undefined") {
+            new WOW().init();
+        }
     }
-
-    divProdutos.innerHTML = ""; // limpa antes de redesenhar
-
-    lista.forEach(function (produto) {
-      const coluna = document.createElement("div");
-      coluna.className = "col-12 col-md-6 col-lg-4 mb-2";
-
-      coluna.innerHTML = `
-        <div class="card h-100">
-          <img src="${produto.imagem_src}" class="card-img-top" alt="${produto.nome_produto}">
-          <div class="card-body">
-            <h5 class="card-title">${produto.nome_produto}</h5>
-            ${produto.preco > 0
-              ? `<p class="card-text fw-bold">${produto.preco.toFixed(2)} €</p>`
-              : `<p class="card-text fw-bold">Preço sob consulta</p>`
-            }
-            <a class="btn btn-catalogo" href="produto.html?id=${produto.id}" role="button">Ver mais</a>
-          </div>
-        </div>
-      `;
-
-      divProdutos.appendChild(coluna);
-    });
-  }
 
   fetch("../assets/data/catalogo.json")
     .then(function (resposta) {

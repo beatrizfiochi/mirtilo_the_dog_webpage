@@ -1,111 +1,236 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
     <title>Mirtilo the Dog</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
     <!--FAVICON-->
-    <link rel="shortcut icon" href="../assets/img/logo/logo.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../../assets/img/logo/logo.ico" type="image/x-icon">
 
-    <!--BOOTSTRAP CSS-->
-    <link rel="stylesheet" href="../assets/style/bootstrap.min.css">
-
-    <!--BOOTSTRAP ICONS-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-
-    <!--GOOGLE FONTS - NUNITO -->
+    <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet"> 
 
-    <!--MEU CSS-->
-    <link rel="stylesheet" href="../assets/style/style.css">
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
 </head>
-<body class="d-flex flex-column min-vh-100">
-    <header>
-        <nav class="navbar navbar-dark bg-transparent fixed-top">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="index.html"><img src="../assets/img/logo/logo_mirtilo.png" alt="logotipo"></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" role="status"></div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Topbar Start -->
+    <div class="container-fluid top-bar bg-dark text-light px-0 wow fadeIn" data-wow-delay="0.1s">
+        <div class="row gx-0 align-items-center d-none d-lg-flex">
+            <div class="col-lg-6 px-5 text-start">
+                <ol class="breadcrumb mb-0">
+                    <li><a class="small text-light" href="#"></a></li>
+                    <li><a class="small text-light" href="#"></a></li>
+                    <li><a class="small text-light" href="#"></a></li>
+                    <li><a class="small text-light" href="#"></a></li>
+                </ol>
             </div>
-        </nav>
-        <div class="offcanvas offcanvas-end minha-offcanvas navbar-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
-            <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel"><img id="offcanvas_img" src="../assets/img/logo/logo.ico" alt="">Mirtilo the Dog</h5>
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            <div class="col-lg-6 px-5 text-end">
+                <div class="h-100 d-inline-flex align-items-center">
+                    <a class="btn-lg-square border-end rounded-0" href="https://www.facebook.com/mirtilothedog"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn-lg-square pe-0" href="https://www.instagram.com/mirtilothedog/"><i class="fab fa-instagram"></i></a>
+                </div>
             </div>
-            <div class="offcanvas-body">
-                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="sobre.html">Sobre nós</a>
-                    </li>
-                    <li class="nav-item">
-                        <div class="accordion" id="accordionExample">
-                            <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                <button class="accordion-button collapsed bg-transparent shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                                    <a class="nav-link active" href="catalogo.html">Catálogo</a>
-                                </button>
-                                </h2>
-                                <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body pt-0">
-                                        <div>
-                                            <a class="nav-link" href="catalogo.html?categoria=todos">Todos</a>
-                                        </div>
-                                        <div>
-                                            <a class="nav-link" href="catalogo.html?categoria=colar">Colares</a>
-                                        </div>
-                                        <div>
-                                            <a class="nav-link" href="catalogo.html?categoria=conta">Contas</a>
-                                        </div>
-                                        <div>
-                                            <a class="nav-link" href="catalogo.html?categoria=porta-chaves">Porta-chaves</a>
-                                        </div>
-                                        <div>
-                                            <a class="nav-link" href="catalogo.html?categoria=personalizado">Personalize o seu</a>
-                                        </div>
-                                        <div>
-                                            <a class="nav-link" href="catalogo.html?categoria=news">Novidades</a>
-                                        </div> 
-                                    </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top py-lg-0 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
+        <a href="index.html" class="navbar-brand ms-4 ms-lg-0">
+            <h1 class="m-0">Mirtilo the Dog</h1>
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav mx-auto p-4 p-lg-0">
+                <a href="index.html" class="nav-item nav-link active">Home</a>
+                <a href="about.html" class="nav-item nav-link">Sobre nós</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Catálogo</a>
+                    <div class="dropdown-menu m-0">
+                        <a href="product.html?categoria=todos" class="dropdown-item">Todos</a>
+                        <a href="product.html?categoria=colar" class="dropdown-item">Colares</a>
+                        <a href="product.html?categoria=conta" class="dropdown-item">Contas</a>
+                        <a href="product.html?categoria=porta-chaves" class="dropdown-item">Porta-chaves</a>
+                        <a href="product.html?categoria=personalizado" class="dropdown-item">Personalize o seu</a>
+                        <a href="product.html?categoria=news" class="dropdown-item">Novidades</a>
+                    </div>
+                </div>
+                <a href="contact.html" class="nav-item nav-link">Faça o seu pedido</a>
+                <a href="" class="nav-item nav-link">Login</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+
+    <!-- Page Header Start -->
+    <div class="container-fluid py-6 wow fadeIn violeta-bg" data-wow-delay="0.1s">
+        <div class="container text-center pt-5 pb-3">
+            <h1 class="display-4 text-white animated slideInDown mb-3">Memórias</h1>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+    <!-- Produto Start -->
+    <div class="container-xxl py-6">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <h1 id="produto-nome" class="display-6 mb-4"></h1>
+                    <p id="produto-descricao" class="mb-5"></p>
+                    <div class="row gy-5 gx-4">
+
+                        <div id="bloco-colecao" class="col-sm-6 wow fadeIn" data-wow-delay="0.1s">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="flex-shrink-0 btn-square bg-primary rounded-circle me-3">
+                                    <i class="fa fa-gem text-white"></i>
                                 </div>
+                                <h5 class="mb-0">Coleção</h5>
                             </div>
+                            <span id="produto-colecao"></span>
                         </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="pedido.html">Faça o seu pedido</a>
-                    </li>
-                </ul>
+
+                        <div id="bloco-material" class="col-sm-6 wow fadeIn" data-wow-delay="0.2s">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="flex-shrink-0 btn-square bg-primary rounded-circle me-3">
+                                    <i class="fa fa-star text-white"></i>
+                                </div>
+                                <h5 class="mb-0">Material</h5>
+                            </div>
+                            <span id="produto-material"></span>
+                        </div>
+
+                        <div id="bloco-cor" class="col-sm-6 wow fadeIn" data-wow-delay="0.3s">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="flex-shrink-0 btn-square bg-primary rounded-circle me-3">
+                                    <i class="fa fa-rainbow text-white"></i>
+                                </div>
+                                <h5 class="mb-0">Cor</h5>
+                            </div>
+                            <span id="produto-cor"></span>
+                        </div>
+
+                        <div class="col-sm-6 wow fadeIn" data-wow-delay="0.4s">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="flex-shrink-0 btn-square bg-primary rounded-circle me-3">
+                                    <i class="fa fa-tag text-white"></i>
+                                </div>
+                                <h5 class="mb-0">Preço</h5>
+                            </div>
+                            <span id="produto-preco"></span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="product-img-wrapper rounded">
+                        <img id="produto-imagem" class="img-fluid rounded" src="" alt="">
+                    </div>
+                </div>
+
+                <!-- Botão voltar -->
+                <div class="mt-5">
+                    <a href="#" id="btn-voltar" class="btn violeta-bg text-light px-4 py-2 rounded-pill">
+                        ← Voltar ao catálogo
+                    </a>
+                </div>
             </div>
         </div>
-    </header>
+    </div>
+    <!-- Produto End -->
 
-    <main id="main-produto" class="d-flex flex-grow-1">
-        <div id="layout-produto">
-            <div id="imagem-produto"></div>
-            <div id="info-produto" class="texto-produto"></div>
-        </div>
-    </main>
-    <footer class="container-fluid text-center p-3 mt-auto fixed-bottom">
-        <div class="row">
-            <div>
-                <p>&copy; Mirtilo the Dog</p>
-                <a href="https://www.facebook.com/mirtilothedog" target="_blank"><i class="bi bi-facebook mx-5"></i></a>
-                <a href="https://www.instagram.com/mirtilothedog/" target="_blank"><i class="bi bi-instagram mx-5"></i></a>
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light footer my-6 mb-0 py-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4">Contactos</h4>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Porto, Portugal</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+351 914 789 211</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>mirtilothedog@gmail.com</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-square btn-outline-light rounded-circle me-1" href="https://www.facebook.com/mirtilothedog"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-square btn-outline-light rounded-circle me-1" href="https://www.instagram.com/mirtilothedog/"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4">Links</h4>
+                    <a class="btn btn-link" href="about.html">Sobre nós</a>
+                    <a class="btn btn-link" href="product.html">Catálogo</a>
+                    <a class="btn btn-link" href="contact.html">Faça o seu pedido</a>
+                    <a class="btn btn-link" href="">Login</a>
+                </div>
             </div>
         </div>
-    </footer>
+    </div>
+    <!-- Footer End -->
 
-    <!--BOOTSTRAP JS-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 
-    <!-- MEU JS -->
+    <!-- Copyright Start -->
+    <div class="container-fluid copyright text-light py-4 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    &copy; <a href="index.html">Mirtilo The Dog</a>, Todos os direitos reservados.
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                    Desenvolvido por <a href="https://www.linkedin.com/in/beatriz-fiochi/">Beatriz Fiochi</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Copyright End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg violeta-bg btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="../scripts/produto.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
 </body>
+
 </html>
